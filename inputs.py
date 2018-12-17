@@ -6,7 +6,7 @@
 class ConstsAndParams:
     def __init__(self):
 
-        # parameters from choose function
+        # parameters to verify function
         y = 'yes'
         n = 'no'
         text_sm = 'Do you want program to calculate schrodinger eq. for stable mass of electron and hole? Yes/no'
@@ -16,7 +16,9 @@ class ConstsAndParams:
         text_rl = 'Please type the right length of well potential (int - preferable 10)'
         text_wl = 'Please type the well length of well potential (int - preferable 20)'
         text_s = 'Pleas type numerical step (float - preferable 0.05)'
-
+        
+        # choice of program options
+        
         self.stable_mass = self.verify_str(y, n, text_sm)
         self.numerv = self.verify_str(y, n, text_nm)
         self.poisson = self.verify_str(y, n, text_ps)
@@ -51,7 +53,7 @@ class ConstsAndParams:
         self.hole_barrier = self.VBO*(self.gaas_gap-self.inas_gap)
         self.electron_barrier = (1-self.VBO)*(self.gaas_gap-self.inas_gap)
 
-    # choose:
+    # verify:
     # This function takes inputs from the user, check it for format purpose
     # and return crucial parameters for numerical model
 
