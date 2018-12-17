@@ -55,16 +55,7 @@ class Onn:
 
         self.time = datetime.datetime.now()
         self.file_name = 'schrodinger_out'
-
-        # Calculations of Schrodinger equation for InAs/GaAs
-        # do maina
-        # self._e_potential()
-        # self.hamiltonian()
-        # self.ev()
-        # self.self_consistent_method()
-        # self.function_choice()
-        # self._parameters()
-        # self.plotting()
+        
 
     def _parameters(self):
 
@@ -341,14 +332,7 @@ class Onn:
         return self.he, self.hh, self.he_sm, self.hh_sm
 
     def _nv(self, consts):
-
-        # n = int(
-        #     (consts.left_length /
-        #      consts.step +
-        #      consts.right_length /
-        #      consts.step +
-        #      consts.well_length /
-        #      consts.step))
+        
         nv = np.zeros((self.n, self.n))
         for i in range(self.n):
             nv[i, i] = 5 / 6
